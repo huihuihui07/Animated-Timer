@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-
-    <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
-    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
-
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <svg height="200" width="200">
-      <circle
-        r="90"
-        cx="100"
-        cy="100"
-        fill="transparent"
-        stroke="blue"
-        stroke-width="10"
-        stroke-dasharray="565"
-        stroke-dashoffset="0"
-        transform="rotate(-90 100 100)"
-      ></circle>
-    </svg>
-    <input type="text" id="duration" />
-    <button id="start">start</button>
-    <button id="pause">pause</button>
+    <div class="timer">
+      <div class="controls">
+        <input id="duration" value="3" />
+        <div>
+          <button id="start"><i class="fas fa-play"></i></button>
+          <button id="pause"><i class="fas fa-pause"></i></button>
+        </div>
+      </div>
+      <svg class="dial">
+        <circle
+          fill="transparent"
+          stroke="green"
+          stroke-width="15"
+          r="190"
+          cx="0"
+          cy="200"
+          transform="rotate(-90 100 100)"
+        />
+      </svg>
+    </div>
 
-    <!-- Script -->
-    <script src="Timer.js"></script>
+    <script src="timer.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
